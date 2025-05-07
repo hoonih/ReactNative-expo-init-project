@@ -6,6 +6,7 @@ export default function Profile() {
       style={{
         flex: 1,
         justifyContent: "center",
+        backgroundColor: 'white',
         alignItems: "center",
       }}
     >

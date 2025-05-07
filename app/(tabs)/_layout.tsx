@@ -8,24 +8,11 @@ import { View, ActivityIndicator, ViewStyle, TextStyle } from 'react-native';
 import { SafeAreaInsetsContext, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
-  const [loaded] = useFonts({
-    Pretendard: require('../../assets/fonts/PretendardVariable.ttf'),
-  });
-
   const insets = useSafeAreaInsets(); // ✅ 안전 영역 정보 가져오기
-
-  if (!loaded) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" />
-      </View>
-    );
-  }
-
   return (
     <Tabs>
       <TabSlot /> 
-      <View style={{ display: 'flex', paddingVertical: 4, flexDirection: 'row', justifyContent: 'space-around', paddingBottom: insets.bottom }}>
+      <View style={{ borderTopWidth: 1, borderColor: '#EFEFEF', backgroundColor: 'white', display: 'flex', paddingVertical: 4, flexDirection: 'row', justifyContent: 'space-around', paddingBottom: insets.bottom }}>
         <TabTrigger name="home" asChild>
           <TabButton activeicon={<HomeIcon selected/>} inactiveicon={<HomeIcon selected={false}/>}>홈</TabButton>
         </TabTrigger>
