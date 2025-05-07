@@ -26,6 +26,17 @@
     "plugins": [
       "expo-router",
       [
+        "expo-font",
+        {
+          "fontDefinitions": [
+            {
+              "fontFamily": "Pretendard",
+              "file": "./assets/fonts/PretendardVariable.ttf"
+            }
+          ]
+        }
+      ],      
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
